@@ -10,7 +10,8 @@ The package.json is basically a file that explains some general information abou
 
 Let's open the package.json file:
 
-main - declares the entry point for our application. It should be set to a file called "index.js". This means if we were to try and run our application, this is the file that would be run. <<< It would fail now, because we haven't created that file yet. We will do so in the next step>>>
+main - declares the entry point for our application. It should be set to a file called "index.js". This means if we were to try and run our application, this is the file that would be run.
+
 scripts - This lets us setup some custom commands for our application. 
       For example we could:
              - make it so our app had a debug mode you could run it in
