@@ -5,7 +5,7 @@
 
 - Create a new branch off of main for all of the changes we are going to make in Step_2
 - Add some code to our _indx.js_ file
-- Add 3rd party libraries for debugging and to enforce coding best practices
+- Add 3rd party libraries for debugging, storing environmental variables and to enforce coding best practices
 - Add "_prettier_" to VSCode to auto format our code
 - Add a src folder
 - Add a our first file with code
@@ -22,6 +22,7 @@
 3. We are going to use npm to manage all of our third party libraries. First we are going to add a library called "debug" and then we are going to add a library called "eslint"
    - First lets make sure npm has the library we are going to use by searching for it: `npm search debug`
    - Now that we know it's there let's install it: `npm install debug`
+   - And after that we will install a library to handle environmental varibales (place where we will also store things like API keys): `npm install dotenv`
    - After that finishes installing, we will install and init eslint:
      `npm install eslint`
      `npx eslint --init` <<<This starts a prompt to initialize eslint>>>

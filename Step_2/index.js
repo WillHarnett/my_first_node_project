@@ -8,8 +8,8 @@ console.log('Hello world');
 // Normally the following code would start at the beginning of the file, but this is just an example
 // All of this code will be erased in the next Step
 
-
+/*
 const newFunctionThatUsesDebug = require('./src/debugTest');
 
 newFunctionThatUsesDebug();
-
+*/

@@ -11,7 +11,8 @@
   "author": "Will",
   "license": "ISC",
   "dependencies": {
-    "debug": "^4.3.2"
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "^7.30.0",
