@@ -1,38 +1,51 @@
-# Step 1
+# Step 2
+
 ##Summary
 **In this step we are going to:**
- - Initialize git
- - Add a gitignore, so we don't use git to manage changes in folders/files that have sensitive information or are for 3rd party libraries
- - Initialize our node project
- - Setup our first .js file which will be our entry point to our application
+
+- Create a new branch off of main for all of the changes we are going to make in Step_2
+- Add some code to our _indx.js_ file
+- Add 3rd party libraries for debugging and to enforce coding best practices
+- Add "_prettier_" to VSCode to auto format our code
+- Add a src folder
+- Add a our first file with code
+- Pracite using the debugging library and some simple outputs
+- Add a script to _package.json_ to run our code
+- Test our code
 
 ##Walkthrough
-1. Let's open the VSCode terminal using the hotkeys: `Control + Shift + ``
-2. Initialize git:
-      - In terminal: `git init`
-      - To create a file to tell git which files/folders we want to ignore: `touch .gitignore`
-      - Open the .gitignore file and copy over what I have in mine
-            The only two things you really need to know in here are: 
-                  node_modules <<<When you install a 3rd party library, this is where all the files for that library are stored>>>
-                  .env <<<This is where we will store some sensitive information like API keys, passwords etc.>>>
-3. Initilize npm:
-      - `npm init`
-      - You should get prompted to fill out some information, the only thing you need to add for now is the name of the package which we will set as: `My_First_node_project`
-      - After you set the package name, just hit enter until the prompt exists. You should see that a package.json file has been created now in your current directory
-4. Now we will add our changes to git:
-      - First we will add any files/folders we've created: `git add .` <<<The . just means everything (except for the stuff we've added to our gitignore file)>>>
-      - Now we will commit those changes: `git commit -m "All of step 1"` <<<with every commit you should add a message to let you know what the changes are. We do this with -m>>>
+
+1. Let's create a new branch: `git checkout -b step-2` <<<Now all of the changes we will be making will only be on this step-2 branch>>>
+   - To see our branches we can use: `git branch` <<<You should see 2 branches: main and step-2>>>
+2. Add some simple code to our index.js file
+   - If you open my index.js file there are comments to guide you through the code and what it means. The file is setup into 2 parts, for this portion just take the first part
+3. We are going to use npm to manage all of our third party libraries. First we are going to add a library called "debug" and then we are going to add a library called "eslint"
+   - First lets make sure npm has the library we are going to use by searching for it: `npm search debug`
+   - Now that we know it's there let's install it: `npm install debug`
+   - After that finishes installing, we will install and init eslint:
+     `npm install eslint`
+     `npx eslint --init` <<<This starts a prompt to initialize eslint>>>
+     In the prompt select the following options: - How would you like to use ESLint? `To check syntax, find problems, and enforce code style` - What type of modules does your project use? `CommonJS (require/exports)` - Which framework does your project use? `None of these` - Does your project use TypeScript? `No` - Where does your code run? `Node` <<<You can select and deselect options using the spacebar>>> - How would you like to define a style for your project? `Use a popular style guide` - Which style guide do you want to follow? `Airbnb: https://github.com/airbnb/javascript` - What format do you want your config file to be in? `JavaScript` - <<<Then you will probably have to install some other libraries, just say yes to that>>> Would you like to install them now with npm? `Yes` - Now if you open the package.json folder you should see two new fields "_[dependencies][1]_" and "_[devDependencies][2]_" for more information <<<debug should really be in the devDependencies section, but for the purposes of this tutorial it does not really matter that much>>>
+   - After all of that finishes, we are going to open the _.eslintrc.js_ and customize it a bit. See my _.eslintrc.js_ file for details
+4. Now we are going to add ther extension "_prettier_" to VSCode <<<prettier just auto formats code before you save. This will help out a lot when you start getting a lot of code>>>
+   - On the left hand side you should see several icons. Select the Extensions icon
+   - In extensions search for "_prettier_"
+   - Select install <<<You might have to reopen VSCode for the changes to take effect>>>
+   - After it's installed you can change settings for "_prettier_" in Code > Prefferences > Settings > and then search for "_prettier_"
+5. Once that is all setup let's create a folder called "_src_"
+6. In the _src_ folder lets add a file called "_debugTest.js_"
+7. Follow the instruction in my _debugTest.js_ file
+8. Ater the _debugTest.js_ file is all setup, complete part 2 of the _indx.js_ file
+9. After the _indx.js_ file part 2 is finished open _package.json_ and follow my comments to add in a script to run our code
+10. Now in the terminal, let's run our code using the two scripts we made and see what happens
+    - Let's try the the simpler one first: `npm start` <<<Start is a special script command, so you do not need to use run like you do with the other script we made>>>
+      You should only see "_Hello World_", "_new Function_" and "_This is the newFunctionWithParameters_" output to the terminal on seperate lines
+    - Next we are going to run our debug script with: `npm run start:debug`
+      You should see everything you saw before plus an additional message that is color coded and says: "_debugTest newFunctionThatUsesDebug +0ms_"
 
 ---
 
-## package.json breakdown
-The package.json is basically a file that explains some general information about how your program is setup. I will walk through a few of the important things you should know for now. I will go into more detail when we setup some more things later on in this tutorial
+## Additional References
 
-Let's open the package.json file:
-
-**main** - declares the entry point for our application. It should be set to a file called "index.js". This means if we were to try and run our application, this is the file that would be run.
-
-**scripts** - This lets us setup some custom commands for our application. 
-      For example we could:
-             - make it so our app had a debug mode you could run it in
-             - run a very specific function in our application
+**[dependencies][1]** In package.json this is where we lsit all the 3rd party libraries we use in our app <<<It's all taken care of by our package manager npm>>>
+**[devDependencies][2]** In package.json this is where we lsit all the 3rd party libraries we use in our app for development purposes <<<It's all taken care of by our package manager npm>>>

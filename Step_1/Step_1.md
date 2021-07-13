@@ -1,4 +1,5 @@
 # Step 1
+
 ##Summary
 **In this step we are going to:**
  - Initialize git
