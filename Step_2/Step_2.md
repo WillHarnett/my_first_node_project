@@ -1,6 +1,6 @@
 # Step 2
 
-##Summary
+## Summary
 **In this step we are going to:**
 
 - Create a new branch off of main for all of the changes we are going to make in Step_2
@@ -13,7 +13,7 @@
 - Add a script to _package.json_ to run our code
 - Test our code
 
-##Walkthrough
+## Walkthrough
 
 1. Let's create a new branch: `git checkout -b step-2` <<<Now all of the changes we will be making will only be on this step-2 branch>>>
    - To see our branches we can use: `git branch` <<<You should see 2 branches: main and step-2>>>

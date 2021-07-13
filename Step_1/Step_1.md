@@ -1,13 +1,13 @@
 # Step 1
 
-##Summary
+## Summary
 **In this step we are going to:**
  - Initialize git
  - Add a gitignore, so we don't use git to manage changes in folders/files that have sensitive information or are for 3rd party libraries
  - Initialize our node project
  - Setup our first .js file which will be our entry point to our application
 
-##Walkthrough
+## Walkthrough
 1. Let's open the VSCode terminal using the hotkeys: `Control + Shift + ``
 2. Initialize git:
       - In terminal: `git init`
