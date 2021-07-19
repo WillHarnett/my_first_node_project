@@ -1,0 +1,26 @@
+{
+  "name": "my_first_node_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:debug": "DEBUG=* jest",
+    "start": "node index.js",
+    "start:debug": "DEBUG=* node index.js"
+  },
+  "author": "Will",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
